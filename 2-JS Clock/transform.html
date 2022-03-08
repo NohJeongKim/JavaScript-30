@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      html body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+      }
+
+      div {
+        margin: 8px 60px;
+      }
+
+      #box1 {
+        background-color: red;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+
+      #box2 {
+        background-color: orange;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+
+      #box3 {
+        background-color: yellow;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+
+      #img {
+        background: url("ocean.jpg");
+        background-size: contain;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+
+      #box1:hover {
+        transform: rotate(
+          -40deg
+        ); /* - 이면 왼쪽으로 40도 돈다는 것을 의미한다. */
+      }
+
+      #box2:hover {
+        transform: translate(10px, 20px);
+      }
+
+      #box3:hover {
+        transform: scale(1.1);
+      }
+
+      #box4 {
+        background-color: yellowgreen;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+
+      .origin {
+        perspective: 300px;
+      }
+
+      #img:hover {
+        transform: rotateX(50deg); /* 3차원 + perspective 원근감을 주기. */
+      }
+
+      #box4:hover {
+        transform: skew(-25deg, -15deg); /* - 이면 왼쪽으로 왜곡시키기. */
+      }
+      /* skew를 이용하면 도형을 사용하지 않고, 직접 만들 수 있다. */
+    </style>
+  </head>
+  <body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <span class="origin">
+      <!-- 부모 태그에 perspective 설정해서 원근감을 주기. -->
+      <div id="img"></div>
+    </span>
+    <div id="box4"></div>
+  </body>
+</html>

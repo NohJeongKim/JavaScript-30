@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      html {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+      }
+
+      body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+      }
+
+      div {
+        margin: 8px 60px;
+      }
+
+      #box1 {
+        background-color: aquamarine;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        transition-property: width, height;
+        transition-delay: 1s; /* 언제부터 시작할 것 인가? */
+        transition-duration: 3s 5s;
+      }
+
+      #box2 {
+        background-color: rgb(153, 54, 153);
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        transition: height 5s;
+        transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
+      }
+
+      #box1:hover {
+        width: 200px;
+        height: 120px;
+      }
+
+      #box2:hover {
+        height: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+  </body>
+</html>
