@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Varible :: Javascript 30</title>
+    <link rel="stylesheet" href="style cssVariable.css" />
+  </head>
+  <body>
+    <h2>Update CSS Variable with <span class="h1">JS</span></h2>
+    <!-- JS도 나중에 색깔 변경되어야 하기 때문에 이렇게 해야된다. -->
+    <div class="control">
+      <div class="controller">
+        <label for="spacing">Spacing : </label>
+        <input
+          id="spacingCtr"
+          type="range"
+          name="spacing"
+          min="10"
+          max="200"
+          value="10"
+          data-sizing="px"
+        />
+        <!-- 단위 추가해주기. -->
+      </div>
+      <div class="controller">
+        <label for="blur">Blur : </label>
+        <input
+          id="blurCtr"
+          type="range"
+          name="blur"
+          min="0"
+          max="25"
+          value="10"
+          data-sizing="px"
+        />
+        <!-- 단위 추가해주기. -->
+      </div>
+      <div class="controller">
+        <label for="baseColor">Base Color : </label>
+        <input
+          id="baseColorCtr"
+          type="color"
+          name="baseColor"
+          value="#fffb33"
+        />
+        <!-- input에 색상표도 있을 줄 몰랐었다. -->
+      </div>
+    </div>
+    <img src="flower.jpg" alt="flower" />
+    <script src="app cssVariable.js" defer></script>
+  </body>
+</html>

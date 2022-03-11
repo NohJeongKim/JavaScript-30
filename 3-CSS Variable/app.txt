@@ -1,0 +1,22 @@
+const inputs = document.querySelectorAll(".controller input");
+// console.log(inputs);
+
+inputs.forEach((input) => input.addEventListener("change", handleUpdate));
+// drag는 감지를 못하기 때문에 type을 추가해주기.
+inputs.forEach((input) => input.addEventListener("mousemove", handleUpdate));
+
+// 변수와 이벤트를 연결시켜주었다.
+
+function handleUpdate(event) {
+  /* 콜백함수, 외부에서 내부로 들어간다. 그리고 원래의 고정된 로직이 아닌 변경된 로직을 의미한다. */
+  // console.log(this.value); // event.value 라고 하면 undefined가 나온다.
+  // console.log(this.value); 값
+  // console.log(this.dataset.sizing); 단위
+  const unit = this.dataset.sizing || "";
+  // console.log(unit); 단위가 있으면 px, 단위가 없으면 공백이다.
+  document.documentElement.style.setProperty(
+    `--${this.name}`,
+    this.value + unit
+  );
+  console.log(this);
+}

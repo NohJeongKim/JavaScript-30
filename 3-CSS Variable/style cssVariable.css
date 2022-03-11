@@ -1,0 +1,55 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Gaegu&display=swap");
+
+:root {
+  /* CSS Variable 이용하는 것이 중요하다. */
+  --background-color: #f6b1b9;
+  --header-color: #f6f7fb;
+  /* 밑에 3개가 인터렉티브한 부분을 만들어 주는 부분이다. */
+  --baseColor: #fffb33; /* name */
+  --spacing: 10px; /* name */
+  --blur: 10px; /* name */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  font-family: "Gaegu", cursive;
+}
+
+.h1 {
+  color: var(--border-color);
+}
+
+h2 {
+  padding: 30px;
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--header-color);
+}
+
+.control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.controller {
+  font-size: 30px;
+  padding: 8px 20px;
+  font-weight: bold;
+}
+
+/* 이미지 부분을 변경할 것이기 때문에 여기서 지정해주기. */
+
+img {
+  width: 800px;
+  height: 500px;
+  margin: 20px;
+  padding: var(--spacing); /* spacing를 의미한다. */
+  background: var(--baseColor); /* 선 색깔을 의미한다. */
+  filter: blur(var(--blur)); /* blur를 의미한다. */
+  /* value가 10px이였으니, 맞춰줘서 CSS-Variable을 제작하였다. */
+}
